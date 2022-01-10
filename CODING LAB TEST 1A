@@ -21,54 +21,59 @@ public class LabTest1A {
 		double pricetopay=0;
 		
 		Scanner scan = new Scanner (System.in);
-			
+		
 	    System.out.print ("Enter the number of items : ");
 	    itemNum = scan.nextInt();
-	   	
-	    System.out.print ("Enter price of first item : RM");
-	    firstItmPrice = scan.nextFloat();
 	    
-	    System.out.print ("Enter quantity of first item : ");
-	    firstItmQty = scan.nextFloat();
-	    
-	    firstTotal = firstItmPrice * firstItmQty;
-	    totalPrice = totalPrice + firstTotal;
-	    System.out.println("");
-	    
-	    System.out.print ("Enter price of second item : RM");
-	    secItmPrice = scan.nextFloat();
-	    
-	    System.out.print ("Enter quantity of second item : ");
-	    secItmQty = scan.nextFloat();
-	    
-	    secTotal = secItmPrice * secItmQty;
-	    totalPrice = totalPrice + secTotal;
-	    System.out.println("");
-	    
-	    System.out.print ("Enter price of third item : RM");
-	    thirdItmPrice = scan.nextFloat();
-	    
-	    System.out.print ("Enter quantity of third item : ");
-	    thirdItmQty = scan.nextFloat();
-	    
-	    thirdTotal = thirdItmPrice * thirdItmQty;
-	    totalPrice = totalPrice + thirdTotal;
-	    System.out.println("");    	    
-	    
-	    if (totalPrice > 100) {	
-	    	dis =  (totalPrice * 20) / 100 ;
-	    	pricetopay = totalPrice - dis;
-	    	} 
-	    
-	    else if (totalPrice <= 100) {	
-	    	dis =  (totalPrice * 10) / 100 ;
-	    	pricetopay = totalPrice - dis;
-	    	}	
-	    
-		System.out.println ("Total price : " + totalPrice);
-    	System.out.println("Discount received : " + dis);
-    	System.out.println ("Price to be paid : " + pricetopay);
+	    if (itemNum<=3) {
+		    System.out.print ("Enter price of first item : RM");
+		    firstItmPrice = scan.nextFloat();
+		    
+		    System.out.print ("Enter quantity of first item : ");
+		    firstItmQty = scan.nextFloat();
+		    
+		    firstTotal = firstItmPrice * firstItmQty;
+		    totalPrice = totalPrice + firstTotal;
+		    System.out.println("");
+		    
+		    System.out.print ("Enter price of second item : RM");
+		    secItmPrice = scan.nextFloat();
+		    
+		    System.out.print ("Enter quantity of second item : ");
+		    secItmQty = scan.nextFloat();
+		    
+		    secTotal = secItmPrice * secItmQty;
+		    totalPrice = totalPrice + secTotal;
+		    System.out.println("");
+		    
+		    System.out.print ("Enter price of third item : RM");
+		    thirdItmPrice = scan.nextFloat();
+		    
+		    System.out.print ("Enter quantity of third item : ");
+		    thirdItmQty = scan.nextFloat();
+		    
+		    thirdTotal = thirdItmPrice * thirdItmQty;
+		    totalPrice = totalPrice + thirdTotal;
+		    System.out.println("");    	    
+		    
+		    if (totalPrice > 100) {	
+		    	dis =  (totalPrice * 20) / 100 ;
+		    	pricetopay = totalPrice - dis;
+		    	} 
+		    
+		    else if (totalPrice <= 100) {	
+		    	dis =  (totalPrice * 10) / 100 ;
+		    	pricetopay = totalPrice - dis;
+		    	}	
+		    
+			System.out.println ("Total price : " + totalPrice);
+	    	System.out.println("Discount received : " + dis);
+	    	System.out.println ("Price to be paid : " + pricetopay);
+	    }
+	    else
+	    	System.out.println ("Maximum number of items is 3");
 		
 	}
+	
 
 }
