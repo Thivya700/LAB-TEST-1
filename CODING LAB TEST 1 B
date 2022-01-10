@@ -1,0 +1,41 @@
+package selfprogramming;
+import java.util.Scanner;
+
+public class LabTest1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double salesVolume;
+		double commission=0;
+		int hours;
+		double dailyWages;
+		double hoursWages;
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("Enter sales :"+ "RM");
+		salesVolume = scan.nextDouble();
+		
+		if ((salesVolume >= 150) && (salesVolume <= 300))
+			commission = 0.05 * salesVolume;
+		
+		else if ((salesVolume >= 301) && (salesVolume <= 500))
+			commission = 0.1 * salesVolume;
+		
+		else if (salesVolume >= 500) 
+			commission = 0.15 * salesVolume;
+		
+		else
+			System.out.println("Wrong input");
+		
+		System.out.print("Enter hours worked :");
+		hours = scan.nextInt();
+		hoursWages = hours * 5;
+		
+		System.out.println("\nCommission :" + "RM" +commission);
+		dailyWages = hoursWages + commission;
+		System.out.println("Daily Wages :" + "RM" + dailyWages);
+
+
+	}
+
+}
